@@ -1,12 +1,20 @@
-# Giả sử 'predicted_prices' là kết quả dự đoán và 'test_prices' là dữ liệu thực tế
-plt.figure(figsize=(14, 7))
-plt.plot(test_prices.index, test_prices, label='Giá thực tế')
-plt.plot(predicted_prices.index, predicted_prices, label='Giá dự đoán')
-plt.title('Dự đoán giá cổ phiếu VNM bằng LSTM')
-plt.xlabel('Ngày')
-plt.ylabel('Giá (VNĐ)')
-plt.legend()
-plt.grid(True)
 
-# Lưu biểu đồ vào file ảnh
-plt.savefig('vnm_prediction_chart.png')
+Dựa trên nội dung của file "LSTM_VNM (2).ipynb", dưới đây là phần giới thiệu, các công cụ và kết quả của chương trình.
+
+    Giới thiệu
+Chương trình này được xây dựng để dự đoán giá cổ phiếu của Vinamilk (mã VNM) bằng cách sử dụng mô hình học máy mạng nơ-ron hồi quy dài-ngắn hạn (LSTM). Mô hình LSTM được đào tạo trên dữ liệu giá cổ phiếu lịch sử từ năm 2013 đến năm 2025 để tìm ra mối quan hệ phụ thuộc theo thời gian, từ đó đưa ra dự báo cho các ngày trong tương lai.
+
+    Các công cụ được sử dụng
+Chương trình sử dụng các thư viện Python sau để thực hiện các bước từ tiền xử lý dữ liệu đến xây dựng và đánh giá mô hình:
+
+pandas: Dùng để đọc và xử lý dữ liệu từ file CSV.
+
+numpy: Hỗ trợ các phép toán xử lý dữ liệu số.
+
+matplotlib.pyplot: Được sử dụng để vẽ biểu đồ.
+
+sklearn.preprocessing.MinMaxScaler: Dùng để chuẩn hóa dữ liệu, đưa dữ liệu về cùng một khoảng giá trị.
+
+keras và tensorflow.keras: Các thư viện cốt lõi để xây dựng mô hình mạng nơ-ron, bao gồm các lớp như Sequential (đầu vào), LSTM (học phụ thuộc), Dropout (tránh học tủ) và Dense (đầu ra).
+
+sklearn.metrics: Dùng để đánh giá độ chính xác của mô hình thông qua các chỉ số như r2_score, mean_absolute_error và mean_absolute_percentage_error.
