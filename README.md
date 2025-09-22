@@ -1,9 +1,11 @@
 
 
 Giới thiệu
+
 Chương trình này được xây dựng để dự đoán giá cổ phiếu của Vinamilk (mã VNM) bằng cách sử dụng mô hình học máy mạng nơ-ron hồi quy dài-ngắn hạn (LSTM). Mô hình LSTM được đào tạo trên dữ liệu giá cổ phiếu lịch sử từ năm 2013 đến năm 2025 để tìm ra mối quan hệ phụ thuộc theo thời gian, từ đó đưa ra dự báo cho các ngày trong tương lai.
 
 Các công cụ được sử dụng
+
 Chương trình sử dụng các thư viện Python sau để thực hiện các bước từ tiền xử lý dữ liệu đến xây dựng và đánh giá mô hình:
 
 pandas: Dùng để đọc và xử lý dữ liệu từ file CSV.
